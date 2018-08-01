@@ -1,0 +1,16 @@
+{% extends 'medic/base.html' %}
+{% block content %}
+    {% for ticket in tickets %}
+        <div class="post">
+            <div class="date">
+               <h1>{{ ticket.fio }}</h1>
+            <h4>Дата рождения {{ ticket.age}}</h4>
+                
+            </div>
+            <br>
+            <p>Дата обращения: {{ ticket.created_date }}</p>
+            <p>{{ ticket.problem|linebreaksbr }}</p>
+            
+        </div>
+    {% endfor %}
+{% endblock %}
